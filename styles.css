@@ -6,7 +6,15 @@
 
 @font-face {
   font-family: "Monaspace Argon";
+  font-weight: normal;
   src: url(https://cdn.jsdelivr.net/gh/githubnext/monaspace@v1.101/fonts/webfonts/MonaspaceArgon-Regular.woff)
+    format(woff2);
+}
+
+@font-face {
+  font-family: "Monaspace Argon";
+  font-weight: bold;
+  src: url(https://cdn.jsdelivr.net/gh/githubnext/monaspace@v1.101/fonts/webfonts/MonaspaceArgon-Bold.woff)
     format(woff2);
 }
 
@@ -42,6 +50,13 @@ h1 {
   padding: 0 1em;
   max-width: 80%;
   margin: auto;
+}
+
+#contact {
+  display: block;
+  text-align: center;
+  margin-top: 2em;
+  color: goldenrod;
 }
 
 h1 span {
@@ -102,7 +117,7 @@ h1 span {
   height: 16px;
   border-radius: 50%;
   border: 2px solid #f5f7fa;
-  background: #ffc600; /* #4fc1e9 */
+  background: goldenrod; /* #4fc1e9 | #ffc600 */
   margin-top: 10px;
   z-index: 9999;
 }
@@ -117,15 +132,34 @@ h1 span {
   color: inherit;
 }
 
+.timeline-content b {
+  color: crimson;
+}
+
 .timeline-content ul {
   padding-left: 0;
   padding-right: 0;
   list-style-type: none;
   font-size: 0.9em;
+  color: #888;
+}
+
+.timeline-content ul li {
+  display: flex;
+  line-height: 150%;
 }
 
 .timeline-block-right .timeline-content ul li::before {
-  content: "› ";
+  content: "›";
+  margin-right: 0.5em;
+}
+
+.timeline-block-left .timeline-content ul li::after {
+  content: "‹";
+  margin-right: 0.5em;
+  display: block;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .timeline-block-right .timeline-content ul li {
@@ -168,9 +202,14 @@ h1 span {
   content: " 🇻🇳";
 }
 
+.timeline-content h3.loc-comet::after {
+  content: " ☄️";
+}
+
 .timeline-content span {
   font-size: 1em;
   color: #a4a4a4;
+  line-height: 150%;
 }
 
 .timeline-content p {
@@ -186,6 +225,16 @@ h1 span {
 
 .hand-written {
   font-family: "Monaspace Radon", sans-serif;
+  color: #ffc600;
+  text-shadow:
+    2px 2px 0 #202c2d,
+    2px -2px 0 #202c2d,
+    -2px 2px 0 #202c2d,
+    -2px -2px 0 #202c2d,
+    2px 0px 0 #202c2d,
+    0px 2px 0 #202c2d,
+    -2px 0px 0 #202c2d,
+    0px -2px 0 #202c2d;
 }
 
 @media screen and (max-width: 768px), print {
@@ -213,5 +262,10 @@ h1 span {
 
   .timeline-block-left .timeline-content ul li::before {
     content: "› ";
+    margin-right: 0.5em;
+  }
+
+  .timeline-block-left .timeline-content ul li::after {
+    content: "";
   }
 }
