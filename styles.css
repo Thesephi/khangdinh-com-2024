@@ -52,10 +52,13 @@ h1 {
   margin: auto;
 }
 
-#contact {
+.foot {
   display: block;
   text-align: center;
   margin-top: 2em;
+}
+
+#contact {
   color: goldenrod;
 }
 
@@ -63,7 +66,8 @@ h1 span {
   font-weight: 600;
 }
 
-.container {
+.container,
+.container-special {
   width: 80%;
   padding: 50px 0;
   margin: 50px auto;
@@ -126,6 +130,31 @@ h1 span {
   width: 95%;
   padding: 0 15px;
   color: #666;
+}
+
+.block-special {
+  border-radius: 1em;
+  background-color: dimgrey;
+  padding: 1.5em;
+}
+
+.timeline-content.block-special h3,
+.timeline-content.block-special p,
+.timeline-content.block-special span {
+  color: lightgrey;
+}
+.timeline-content.block-special b {
+  color: goldenrod;
+}
+
+.timeline-block.extra-y-margin {
+  margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.marker-special {
+  background-color: transparent;
+  border: none;
 }
 
 .timeline-content a {
