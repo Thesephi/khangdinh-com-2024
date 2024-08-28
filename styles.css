@@ -159,10 +159,16 @@ h1 span {
 
 .timeline-content a {
   color: inherit;
+  border-bottom: 1px solid;
+  text-decoration: none;
 }
 
 .timeline-content b {
   color: crimson;
+}
+
+.timeline-content i {
+  color: darkcyan;
 }
 
 .timeline-content ul {
