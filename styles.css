@@ -33,7 +33,7 @@
 
 body {
   margin: 0;
-  padding: 30px 0;
+  padding: 0;
   font-family: "Monaspace Argon", "Roboto", sans-serif;
   background: #f1f2f6;
 }
@@ -42,6 +42,7 @@ h1 {
   text-align: center;
   font-weight: 300;
   color: #777;
+  font-size: 2em;
 }
 
 #the-subtitle {
@@ -64,6 +65,37 @@ h1 {
 
 h1 span {
   font-weight: 600;
+}
+
+a {
+  color: inherit;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+
+a.no-underline {
+  border-bottom: none;
+}
+
+.abstract-container {
+  background-color: #f8e71c;
+}
+.abstract-container::after {
+  display: block;
+  content: " ";
+  width: 100%;
+  height: 110px;
+  background-image: url("/waves.svg");
+}
+
+.abstract {
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.abstract p:first-child {
+  margin: 0;
 }
 
 .container,
@@ -157,12 +189,6 @@ h1 span {
   border: none;
 }
 
-.timeline-content a {
-  color: inherit;
-  border-bottom: 1px solid;
-  text-decoration: none;
-}
-
 .timeline-content b {
   color: crimson;
 }
@@ -211,6 +237,17 @@ h1 span {
   margin-bottom: 5px;
   font-size: 2em;
   font-weight: 500;
+}
+
+.timeline-content h3.suf-oss::after {
+  display: inline-block;
+  content: " ";
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"%0Aaria-label="Open Source" role="img"%0AviewBox="0 0 512 512"%3E%3Cpath fill="%233da639" stroke="%231d531d" stroke-width="14" stroke-linejoin="round" d="M192 430a180 180 0 11128 0l-40-109a63 63 0 10-87-58c0 26 16 49 39 58z"/%3E%3C/svg%3E');
+  background-size: 32px 32px;
+  height: 32px;
+  width: 40px;
+  background-position: right 4px;
+  background-repeat: no-repeat;
 }
 
 .timeline-content h3.loc-glb::after {
@@ -302,5 +339,28 @@ h1 span {
 
   .timeline-block-left .timeline-content ul li::after {
     content: "";
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  /* html, body: {
+    padding: 0;
+    margin: 0;
+  } */
+  .abstract {
+    font-size: 0.9em;
+  }
+  .no-print {
+    display: none;
+  }
+  .print-only {
+    display: unset;
+  }
+  .abstract {
+    padding-bottom: unset;
   }
 }
