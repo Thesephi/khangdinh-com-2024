@@ -79,6 +79,7 @@ a.no-underline {
 
 .abstract-container {
   background-color: #f8e71c;
+  color: #000;
 }
 .abstract-container::after {
   display: block;
