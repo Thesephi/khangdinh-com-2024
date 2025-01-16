@@ -53,6 +53,22 @@ h1 {
   margin: auto;
 }
 
+.short-abt-me {
+  background-color: #22223b;
+  color: #f1f2f6;
+  line-height: 2em;
+  border-radius: 1em;
+  position: absolute;
+  right: 10%;
+  z-index: 3;
+  padding: 1em;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.short-abt-me svg {
+  position: relative;
+  top: 2px;
+}
+
 .foot {
   display: block;
   text-align: center;
@@ -85,7 +101,7 @@ a.no-underline {
   display: block;
   content: " ";
   width: 100%;
-  height: 110px;
+  height: 109px;
   background-image: url("/waves.svg");
 }
 
@@ -156,7 +172,7 @@ a.no-underline {
   border: 2px solid #f5f7fa;
   background: goldenrod; /* #4fc1e9 | #ffc600 */
   margin-top: 10px;
-  z-index: 9999;
+  z-index: 2;
 }
 
 .timeline-content {
@@ -363,5 +379,19 @@ a.no-underline {
   }
   .abstract {
     padding-bottom: unset;
+  }
+  .short-abt-me {
+    box-shadow: none;
+  }
+  .hand-written {
+    text-shadow:
+      1px 1px 0 #202c2d,
+      1px -1px 0 #202c2d,
+      -1px 1px 0 #202c2d,
+      -1px -1px 0 #202c2d,
+      1px 0px 0 #202c2d,
+      0px 1px 0 #202c2d,
+      -1px 0px 0 #202c2d,
+      0px -1px 0 #202c2d;
   }
 }
