@@ -297,7 +297,7 @@ a.no-underline {
 
 .timeline-content span {
   font-size: 1em;
-  color: #a4a4a4;
+  color: rgb(136, 136, 136); /*#a4a4a4*/
   line-height: 150%;
 }
 
